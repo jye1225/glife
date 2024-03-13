@@ -1,0 +1,230 @@
+@charset 'utf-8';
+@import url(./my_reset.css);
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+Solid → 900
+Regular, Brands → 400
+Light → 300
+ */
+
+:root {
+  font-size: 16px;
+}
+body {
+  font-family: "S-CoreDream-3Light";
+  /* font-weight: 900; */
+  line-height: 1;
+}
+.wrap {
+  overflow: hidden;
+}
+.mw {
+  max-width: 1440px;
+  width: calc(100% - 5rem);
+  margin: auto;
+}
+.hd {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  background-color: white;
+}
+nav {
+  width: calc(100% - 5rem);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hd .logo {
+  padding: 1rem 0;
+  margin: 0 1rem 0 3rem;
+  width: 120px;
+}
+.hd .logo:hover {
+  opacity: 0.8;
+}
+
+.hd .gnb {
+  display: flex;
+}
+.hd .gnb a {
+  font-weight: bold;
+  display: block;
+  white-space: nowrap;
+}
+
+.hd .gnb > li:hover > a {
+  color: black;
+}
+.hd .gnb > li {
+  position: relative;
+  padding: 1rem 0;
+}
+.hd .gnb > li > a {
+  text-align: left;
+  padding: 1rem 5rem 1rem 0.5rem;
+  color: navy;
+  font-size: 16px;
+}
+.hd .sub {
+  font-size: 13px;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  text-align: left;
+  transition: opacity 0.5s;
+  opacity: 0;
+  height: 0;
+  z-index: 1000;
+}
+.hd:hover .sub {
+  opacity: 1;
+  height: 170px;
+}
+.hd .sub a {
+  padding: 0.5rem;
+}
+.sub > li a {
+  vertical-align: middle;
+}
+.sub > li a::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: navy;
+  transition: 0.3s;
+  opacity: 0;
+  margin-left: 16px;
+}
+.sub > li a:hover::after {
+  opacity: 1;
+  margin-left: 16px;
+}
+.hd .func > * {
+  color: navy;
+}
+.hd .func {
+  display: flex;
+}
+.hd .func a {
+  padding: 0rem 1.5rem 0rem 0rem;
+  font-size: 0.75rem;
+  position: relative;
+  white-space: nowrap;
+  font-size: 11px;
+}
+.hd .func a i {
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+.hd .func a::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: calc(100% - 2rem);
+  background-color: #999;
+  opacity: 0;
+}
+.hd .func a:hover::before {
+  opacity: 1;
+}
+.hd::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #eff4fe;
+  top: 85px;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 2s;
+}
+
+.hd:hover::before {
+  height: 160px;
+  opacity: 1;
+}
+/*header 끝*/
+
+.ham {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  display: none;
+}
+.ham:hover,
+.ham:focus {
+  color: dodgerblue;
+}
+@media (max-width: 1200px) {
+  .hd .gnb::before {
+    left: -1000%;
+    width: 2000%;
+  }
+}
+@media (max-width: 1000px) {
+  .hd .logo {
+    padding: 1rem 0;
+    margin: 0 0 0 3rem;
+    width: 80px;
+  }
+  .hd .gnb,
+  .hd::before,
+  .hd .func {
+    display: none;
+  }
+  .ham {
+    display: block;
+  }
+}
+.sw {
+  width: calc(100% - 5rem);
+  margin: 0 auto;
+  position: relative;
+  color: navy;
+  height: 500px;
+}
+.sw span {
+  position: absolute;
+  margin: 13% 0 0 5%;
+  font-size: 20px;
+}
+.sw h2 {
+  position: absolute;
+  margin: 16% 0 0 5%;
+  font-size: 50px;
+}
+.sw img {
+  position: absolute;
+  margin: 3% 5% 2% 0;
+  width: 50%;
+  right: 0;
+}
+
+.sb {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #334789;
+  height: 500px;
+}
