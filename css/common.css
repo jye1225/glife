@@ -132,8 +132,8 @@ nav {
 .hd .func a::before {
   content: "";
   position: absolute;
-  bottom: 5px;
-  left: 50%;
+  bottom: 0.1px;
+  left: 35%;
   transform: translateX(-50%);
   height: 1px;
   width: calc(100% - 2rem);
